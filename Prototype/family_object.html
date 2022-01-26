@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let family = {
+        father:"Ramakrishna",
+        mother:"ganga"
+    }
+
+    var father = Object.create(family)
+    father.name = "narasimha";
+
+    var son = Object.create(father)
+    son.name = "Anand";
+
+    console.log(son)
+
+    function family2(f_name,m_name)
+    {
+        this.father = f_name;
+        this.mother = m_name
+    }
+
+    let father2 = new family2("ramakrishna","Ganga")
+    let son2 = new family2("narasimha","Sujatha")
+
+</script>

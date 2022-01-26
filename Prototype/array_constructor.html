@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>
+<script>
+
+function MyArray() {
+    this.length = arguments.length;
+
+        Object.defineProperty(this, "length", {
+        writable: true,
+        enumerable: false,
+    });
+}
+
+MyArray.prototype.push = function (num) {
+
+    this[this.length] = num;
+    this.length++;
+};
+
+MyArray.prototype.reverse = function () {
+    let n = 0;
+    let bag = {}
+    for (let num = this.length-1; num >= 0; num--)
+    {   
+        bag[n] = this[num]
+        n++
+    }
+    for (let m = 0; m < this.length-1; m++)
+    {   
+       this[m] = bag[m]
+    }
+    return this
+};
+
+MyArray.prototype.firstElem = function(){
+    let elem = this[this.length-1]
+    return elem
+}
+
+let array = new MyArray();
+
+array.push(7);
+array.push(4);
+array.push(8);
+array.push(3);
+console.log("Push:",Object.values(array));
+console.log("Reverse:",Object.values(array.reverse()));
+console.log("First Element:",array.firstElem());
+</script>
