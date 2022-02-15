@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+
+
+// Call Apply and Bind
+let obj = 
+{
+    name:"anand",
+    age:23,
+    city:"moodbidri"
+}
+
+
+// function printname(a)
+// {
+//     this.color = a
+// }
+// printname.call(obj,"yellow")
+// console.log("CALL : ",obj)
+
+// printname.apply(obj,["orange"]) // USE ARRAY
+// console.log("APPLY : ",obj)
+
+// let ob = printname.bind(obj,"red")
+// ob() // stored in as function and can call whenever we want
+// console.log("BIND : ",obj)
+        
+// PROTOTYPE
+
+// using constructor function 
+// function random()
+// {
+//     this.letter = "a"
+//     this.caps = "A"
+//     this.num = "1"
+// }
+
+// random.prototype.types = function(c){
+//     this.type = c
+// }
+
+// let letter = new random()
+
+// letter.types("number")
+// console.log(letter)
+
+let l = Object.create(obj)
+l.name = "b"
+console.log(obj,l)
+
+
+
+</script>
